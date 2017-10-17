@@ -3,6 +3,7 @@ import LayoutDefault from './layouts/Default';
 import Projects from './components/projects/Projects';
 
 class App extends Component {
+  
 
   constructor() {
     super();
