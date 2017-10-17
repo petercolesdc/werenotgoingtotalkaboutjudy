@@ -19,6 +19,7 @@ $vpMax: $vpF;
 // Assigned viewports
 $vpTable:           $vpC;
 $vpMenu:            ($vpC + 100px);
+$vpRowBuffer:       ($vpC);
 $vpDeviceSafe:      800px;
 
 // Maximum container if using set-max width. Often used in '.row'

@@ -8,7 +8,8 @@ class ProjectItem extends Component {
     //console.log(this.props);
     return (
       <li className={styles.project}>
-        <strong className={styles.title}>{this.props.project.title}:</strong> {this.props.project.category}
+        <strong className={styles.title}>{this.props.project.title}:</strong>
+        {this.props.project.category}
       </li>
     );
   }

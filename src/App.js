@@ -3,7 +3,6 @@ import LayoutDefault from './layouts/Default';
 import Projects from './components/projects/Projects';
 
 class App extends Component {
-  
 
   constructor() {
     super();
@@ -33,16 +32,6 @@ class App extends Component {
     );
   }
 
-  handleAddProject(project) {
-    //console.log(project);
-    let projects = this.state.projects;
-    projects.push(project);
-    this.setState(
-      {
-        projects:projects
-      }
-    );
-  }
 
   render() {
     return (

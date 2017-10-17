@@ -5,6 +5,7 @@
   display: block;
   padding: $bufferSpace/2;
   background-color: $dmJumpsuit;
+  @include rowDefault;
 }
 
 .form {

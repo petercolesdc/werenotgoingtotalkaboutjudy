@@ -6,7 +6,6 @@
 	@import '../core/utl.scss';								// Utilities for fixing odd and outlying bugs
 	@import '../core/typography-base.scss';		// Site-wide, basic type styles
 	@import '../core/typography.scss';				// Typography scale and measure
-	@import '../core/row.scss';								// Rows
 	html {
 		font-size: $remRoot + px;
 		::-webkit-scrollbar {
