@@ -1,6 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-In additon, it was enhanced for CSS modules and SCSS by following this guide https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196a <br>
+This project was bootstrapped with Create React App and enhanced for CSS modules and SCSS by following this guide via [This install process] (https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196a). <br>
 
 <hr/>
 
