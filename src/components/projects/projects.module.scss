@@ -1,0 +1,23 @@
+@import '../../theme/required/variables.scss';
+
+.projects {
+  position: relative;
+  display: block;
+  padding: $bufferSpace/2;
+  background-color: $dmJumpsuit;
+}
+
+.form {
+  position: relative;
+  display: block;
+  padding: $bufferSpace/2;
+}
+
+.project {
+  display: block;
+  font-size: rem($typeMe);
+}
+
+.title {
+  font-weight: 500;
+}

@@ -1,0 +1,12 @@
+@import '../required/variables.scss';
+
+// SVG bug work aroud whereby svg's require a height of some kind
+svg {
+	max-height: 10000px;
+}
+
+// Overide iOS telephone styling on links
+a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}

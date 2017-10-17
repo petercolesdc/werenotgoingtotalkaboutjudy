@@ -1,0 +1,31 @@
+@import '../required/variables.scss';
+
+// ---
+// Base type styles
+// ---
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	color: $dmText;
+	font-family: $fontBrand;
+	line-height: $lineheightRoot; // Set a global line-height. Modules can easily over-ride this
+}
+
+a {
+	color: $dmAction;
+	text-decoration: underline $dmAction;
+	&:hover, &:focus, &:active {
+		text-decoration: underline $dmActionRespond;
+	}
+}
+
+ul, ol {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}

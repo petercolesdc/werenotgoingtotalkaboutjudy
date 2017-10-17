@@ -1,0 +1,6 @@
+@import '../theme/required/variables.scss';
+
+.default {
+  position: relative;
+  @include pie-clearfix;
+}

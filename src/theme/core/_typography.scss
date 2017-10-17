@@ -1,0 +1,111 @@
+@import '../required/variables.scss';
+
+.typeheading {
+	font-family: $fontBrand;
+	font-weight: 500;
+}
+
+.typedemiheading {
+	font-family: $fontBrand;
+	font-weight: 500;
+}
+
+.typebase {
+	line-height: $lineheightRoot;
+	margin-bottom: 0;
+	margin-top: 0;
+	p,
+	li {
+		margin-top: 0;
+		font-size: rem($typeMe);
+		margin-bottom: rem($typeMe);
+		display: block;
+	}
+	li {
+		margin-bottom: rem($typeMe/2);
+	}
+	ul,
+	ol {
+		margin-top: 0;
+		margin-bottom: rem($typeMe);
+	}
+	img {
+		display: block;
+		margin-top: rem($typeMe);
+		margin-bottom: rem($typeMe);
+	}
+}
+
+// Typescale
+.typeHeadline {
+	@extend .typebase;
+	font-size: rem($typeHeadline);
+	line-height: 1.4;
+	&_trailer {
+		margin-bottom: rem($typeHeadline/2);
+	}
+}
+
+.typeByline {
+	@extend .typebase;
+	font-size: rem($typeByline);
+	&_trailer {
+		margin-bottom: rem($typeByline/2);
+	}
+}
+
+.typeXXL {
+	@extend .typebase;
+	font-size: rem($typeXXL);
+	&_trailer {
+		margin-bottom: rem($typeXXL/2);
+	}
+}
+
+.typeXL {
+	@extend .typebase;
+	font-size: rem($typeXL);
+	&_trailer {
+		margin-bottom: rem($typeXL/2);
+	}
+}
+
+.typeL {
+	@extend .typebase;
+	font-size: rem($typeL);
+	&_trailer {
+		margin-bottom: rem($typeL/2);
+	}
+}
+
+.typeM {
+	@extend .typebase;
+	font-size: rem($typeM);
+	&_trailer {
+		margin-bottom: rem($typeM/2);
+	}
+}
+
+.typeMe {
+	@extend .typebase;
+	font-size: rem($typeMe);
+	&_trailer {
+		margin-bottom: rem($typeM/2);
+	}
+}
+
+.typeS {
+	@extend .typebase;
+	font-size: rem($typeS);
+	&_trailer {
+		margin-bottom: rem($typeS/2);
+	}
+}
+
+.typeXS {
+	@extend .typebase;
+	font-size: rem($typeXS);
+	&_trailer {
+		margin-bottom: rem($typeXS/2);
+	}
+}
