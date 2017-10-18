@@ -1,5 +1,34 @@
 
-
+// Sliced text
+@mixin sliced-text {
+  position: relative;
+  visibility: hidden;
+  &::before,
+  &::after {
+    visibility: visible;
+    content: attr(data-word);
+    position: absolute;
+    top: 0;
+		right: 0;
+    bottom: 0;
+		left: 0;
+    z-index: 1;
+    transition: transform 0.5s;
+  }
+  &::before {
+    clip-path: polygon(0 0, 100% 0%, 100% 07%, 0 115%);
+    //will-change: transform;
+    transform: translatex(-0.2rem);
+  }
+  &::after {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 09%, 0 117%);
+    transform: translatex(0.2rem);
+  }
+  &:hover::before,
+  &:hover::after {
+    transform: translatex(0) translatez(0);
+  }
+}
 
 // ----
 // Consistent spacing
@@ -29,8 +58,10 @@
 	max-width: $containerMax;
 	min-width: auto;
 	position: relative;
-	@include edgeBufferLeft;
-	@include edgeBufferRight;
+	@include respond-to($vpRowBuffer) {
+		margin-left: $bufferSpace;
+		margin-right: $bufferSpace;
+	}
 }
 
 // ----

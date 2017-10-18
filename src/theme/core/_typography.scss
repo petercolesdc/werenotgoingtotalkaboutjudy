@@ -1,44 +1,27 @@
 @import '../required/variables.scss';
 
-.typeheading {
-	font-family: $fontBrand;
-	font-weight: 500;
-}
-
-.typedemiheading {
-	font-family: $fontBrand;
-	font-weight: 500;
-}
-
-.typebase {
+%typebaseRoot {
 	line-height: $lineheightRoot;
 	margin-bottom: 0;
 	margin-top: 0;
-	p,
-	li {
-		margin-top: 0;
-		font-size: rem($typeMe);
-		margin-bottom: rem($typeMe);
-		display: block;
-	}
-	li {
-		margin-bottom: rem($typeMe/2);
-	}
-	ul,
-	ol {
-		margin-top: 0;
-		margin-bottom: rem($typeMe);
-	}
-	img {
-		display: block;
-		margin-top: rem($typeMe);
-		margin-bottom: rem($typeMe);
-	}
 }
+
+
+// Heading styles
+.typeHeading {
+	font-family: $fontBrand;
+	font-weight: 600;
+}
+
+.typedemiHeading {
+	font-family: $fontBrand;
+	font-weight: 500;
+}
+
 
 // Typescale
 .typeHeadline {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeHeadline);
 	line-height: 1.4;
 	&_trailer {
@@ -55,7 +38,7 @@
 }
 
 .typeXXL {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeXXL);
 	&_trailer {
 		margin-bottom: rem($typeXXL/2);
@@ -63,7 +46,7 @@
 }
 
 .typeXL {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeXL);
 	&_trailer {
 		margin-bottom: rem($typeXL/2);
@@ -71,7 +54,7 @@
 }
 
 .typeL {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeL);
 	&_trailer {
 		margin-bottom: rem($typeL/2);
@@ -95,7 +78,7 @@
 }
 
 .typeS {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeS);
 	&_trailer {
 		margin-bottom: rem($typeS/2);
@@ -103,9 +86,35 @@
 }
 
 .typeXS {
-	@extend .typebase;
+	@extend %typebaseRoot;
 	font-size: rem($typeXS);
 	&_trailer {
 		margin-bottom: rem($typeXS/2);
+	}
+}
+
+// Can be used on parent element to define child type styles
+// Articles or Blog posts are a good example
+.typebase {
+	@extend %typebaseRoot;
+	p,
+	li {
+		margin-top: 0;
+		font-size: rem($typeMe);
+		margin-bottom: rem($typeMe);
+		display: block;
+	}
+	li {
+		margin-bottom: rem($typeMe/2);
+	}
+	ul,
+	ol {
+		margin-top: 0;
+		margin-bottom: rem($typeMe);
+	}
+	img {
+		display: block;
+		margin-top: rem($typeMe);
+		margin-bottom: rem($typeMe);
 	}
 }

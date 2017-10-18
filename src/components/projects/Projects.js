@@ -15,10 +15,12 @@ class Projects extends Component {
       });
     }
     return (
-      <ul className={styles.projects}>
-        <h3>Latest projects</h3>
-        { projectItems }
-      </ul>
+      <div className={styles.projects}>
+        <h3 className="typeXL typeXL_trailer typeHeading">Latest projects</h3>
+        <ul className={styles.list}>
+          { projectItems }
+        </ul>
+    </div>
     );
   }
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LayoutDefault from './layouts/Default';
 import Projects from './components/projects/Projects';
+import CubeMask from './components/svgcube/CubeMask';
 
 class App extends Component {
 
@@ -36,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <LayoutDefault>
+        <CubeMask />
         <Projects projects={this.state.projects}/>
       </LayoutDefault>
     );

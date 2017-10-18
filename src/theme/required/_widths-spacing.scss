@@ -11,7 +11,7 @@ $sectionSpacing:    60px;
 $vpA: 300px;
 $vpB: 600px;
 $vpC: 800px;
-$vpD: 1000px;
+$vpD: 1020px;
 $vpE: 1200px;
 $vpF: 1400px;
 $vpMax: $vpF;
@@ -23,4 +23,4 @@ $vpRowBuffer:       ($vpC);
 $vpDeviceSafe:      800px;
 
 // Maximum container if using set-max width. Often used in '.row'
-$containerMax:      ($vpE + $bufferSpace*2);
+$containerMax:      ($vpD + $bufferSpace*2);

@@ -4,14 +4,12 @@
   position: relative;
   display: block;
   padding: $bufferSpace/2;
-  background-color: $dmJumpsuit;
+  background-color: $dmBlossom;
   @include rowDefault;
 }
 
-.form {
-  position: relative;
+.list {
   display: block;
-  padding: $bufferSpace/2;
 }
 
 .project {
