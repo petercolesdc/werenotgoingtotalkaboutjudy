@@ -1,50 +1,18 @@
-
-// Sliced text
-@mixin sliced-text {
-  position: relative;
-  visibility: hidden;
-  &::before,
-  &::after {
-    visibility: visible;
-    content: attr(data-word);
-    position: absolute;
-    top: 0;
-		right: 0;
-    bottom: 0;
-		left: 0;
-    z-index: 1;
-    transition: transform 0.5s;
-  }
-  &::before {
-    clip-path: polygon(0 0, 100% 0%, 100% 07%, 0 115%);
-    //will-change: transform;
-    transform: translatex(-0.2rem);
-  }
-  &::after {
-    clip-path: polygon(0% 100%, 100% 100%, 100% 09%, 0 117%);
-    transform: translatex(0.2rem);
-  }
-  &:hover::before,
-  &:hover::after {
-    transform: translatex(0) translatez(0);
-  }
-}
-
 // ----
 // Consistent spacing
 // ----
 
 @mixin edgeBufferLeft {
-	left: $bufferSpace/2;
-	@include respond-to($vpRowBuffer) {
-		left: $bufferSpace;
+	left: $bufferSpaceS;
+	@include respond-to($vpRowBufferA) {
+		left: $bufferSpaceM;
 	}
 }
 
 @mixin edgeBufferRight {
-	right: $bufferSpace/2;
-	@include respond-to($vpRowBuffer) {
-		right: $bufferSpace;
+	right: $bufferSpaceS;
+	@include respond-to($vpRowBufferA) {
+		right: $bufferSpaceM;
 	}
 }
 
@@ -58,9 +26,11 @@
 	max-width: $containerMax;
 	min-width: auto;
 	position: relative;
-	@include respond-to($vpRowBuffer) {
-		margin-left: $bufferSpace;
-		margin-right: $bufferSpace;
+	padding-left: $bufferSpaceS;
+	padding-right: $bufferSpaceS;
+	@include respond-to($vpRowBufferA) {
+		padding-left: $bufferSpaceM;
+		padding-right: $bufferSpaceM;
 	}
 }
 

@@ -1,0 +1,43 @@
+// ---
+// Widths & spacing
+// ---
+
+// General spacing options
+
+$spaceXs: 	10px;
+$spaceS: 		15px;
+$spaceMe: 	22px;	// Median
+$spaceL: 		40px;
+$spaceXL: 	60px;
+
+// ------------------------------------------------------------------
+
+// Buffers. Edge spacing of parent elements generally (rows etc...)
+$bufferSpaceS:	$spaceS;
+$bufferSpaceM:	$spaceMe;
+$bufferSpaceL:	$spaceL;
+
+// Double declare variable so we know what the largest buffer size is
+$bufferSpaceMax:	$bufferSpaceL;
+
+// ------------------------------------------------------------------
+
+// Viewports. Horizontal break widths
+$vpA: 300px;
+$vpB: 600px;
+$vpC: 800px;
+$vpD: 1020px;
+$vpE: 1200px;
+$vpF: 1400px;
+$vpMax: $vpF;
+$vpRowBufferA:		$vpC;	// Buffer switch points. Add as required
+
+// Assign viewports to tasks
+$vpTable:					$vpC;		// Table view switch
+$vpMenu:					$vpC;		// Menu for small screen switch
+$vpDeviceSafe:		800px;	// Safe width for tablet type things as they can be weird
+
+// ------------------------------------------------------------------
+
+// Misc assignments
+$containerMax:	($vpE + $bufferSpaceMax*2);	// Maximum container if using set-max width. Often used in '.row'

@@ -1,46 +1,15 @@
 import React, { Component } from 'react';
 import LayoutDefault from './layouts/Default';
-import Projects from './components/projects/Projects';
-import CubeMask from './components/svgcube/CubeMask';
+import Button from './components/Button/Button';
 
 class App extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      projects: []
-    }
-  }
-
-  componentWillMount() {
-    this.setState(
-        {
-          projects: [
-          {
-            title: 'Business website',
-            category: 'Web design'
-          },
-          {
-            title: 'Social app',
-            category: 'Mobile dev'
-          },
-          {
-            title: 'Ecommerce cart',
-            category: 'Web development'
-          }
-        ]
-      }
-    );
-  }
-
 
   render() {
     return (
       <LayoutDefault>
-        <CubeMask />
-        <Projects projects={this.state.projects}/>
+        <Button asClass="button"/>
       </LayoutDefault>
-    );
+    )
   }
 
 }

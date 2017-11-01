@@ -12,7 +12,7 @@ html {
 
 body {
 	color: $dmText;
-	font-family: $fontBrand;
+	font-family: $fontDefault;
 	line-height: $lineheightRoot; // Set a global line-height. Modules can easily over-ride this
 }
 

@@ -6,7 +6,6 @@
 	margin-top: 0;
 }
 
-
 // Heading styles
 .typeHeading {
 	font-family: $fontBrand;
@@ -17,7 +16,6 @@
 	font-family: $fontBrand;
 	font-weight: 500;
 }
-
 
 // Typescale
 .typeHeadline {
@@ -69,6 +67,7 @@
 	}
 }
 
+// Median
 .typeMe {
 	@extend .typebase;
 	font-size: rem($typeMe);

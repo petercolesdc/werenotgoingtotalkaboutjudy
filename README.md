@@ -1,3 +1,5 @@
+<img src="https://i.imgur.com/jm26oUG.gif">
+
 This project was bootstrapped with Create React App and enhanced for CSS modules and SCSS by following this guide via [This install process](https://medium.com/@kitze/configure-create-react-app-without-ejecting-d8450e96196a). <br>
 
 Or, if you're feeling saucy and don't wish to read that, just bang in

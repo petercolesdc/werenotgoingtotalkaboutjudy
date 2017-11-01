@@ -13,18 +13,19 @@ $dmCoalface: 				#181818;
 $dmCoalfaceLight: 	lighten($dmCoalface, 20%);
 $dmGhost: 					lighten($dmCoalface, 75%);
 
-// ---
-// Assign colours from vaiiables
-// ---
+// ------------------------------------------------------------------
 
+// Assign colours from variables
 $dmPrime: 					$dmJumpsuit;
 $dmPrimeAccent: 		$dmSmokewater;
 $dmAction: 					$dmGinblossom;
 $dmActionRespond: 	$dmBlossom;
 
+
 // Default text colors
 $dmHeadings: 				$dmCoalface;
 $dmText: 						$dmCoalface;
+
 
 // Misc. color assignments
 $dmDisabled: 				$dmGhost;
