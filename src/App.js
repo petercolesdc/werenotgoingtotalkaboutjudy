@@ -7,11 +7,10 @@ class App extends Component {
   render() {
     return (
       <LayoutDefault>
-        <Button asClass="button"/>
+        <Button className="primary">Button</Button>
       </LayoutDefault>
     )
   }
-
 }
 
 export default App;
