@@ -1,7 +1,15 @@
 .button {
   position: relative;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .primary {
   background-color: red;
+}
+
+.disabled {
+  font-style: italic;
 }

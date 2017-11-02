@@ -3,10 +3,11 @@
 @import 'measure.scss';		         // Widths / spacing of things
 @import 'mixins.scss';						 // Mixins
 
-// --
-// Define further variables
-// --
+// Font declarations
+// ------------------------------------------------------------------
 
-// Brand font
-$fontBrand: system-ui, sans-serif;
-$fontDefault: $fontBrand;
+$fontBrand:     system-ui, sans-serif;
+$fontVoice:     system-ui, sans-serif;
+$fontMono:      fira-sans, monospace;
+
+$fontDefault:   $fontBrand;

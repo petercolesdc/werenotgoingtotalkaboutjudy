@@ -7,7 +7,12 @@ class App extends Component {
   render() {
     return (
       <LayoutDefault>
-        <Button className="primary">Button</Button>
+        <Button
+          color={'primary'}
+          className={'button'}
+          disabled
+        >
+        Button</Button>
       </LayoutDefault>
     )
   }

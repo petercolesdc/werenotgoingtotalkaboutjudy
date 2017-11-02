@@ -1,6 +1,3 @@
-// ---
-// Widths & spacing
-// ---
 
 // General spacing options
 
@@ -30,12 +27,14 @@ $vpD: 1020px;
 $vpE: 1200px;
 $vpF: 1400px;
 $vpMax: $vpF;
-$vpRowBufferA:		$vpC;	// Buffer switch points. Add as required
+
+// Buffer switch points. Add as required
+$vpRowBufferA:		$vpC;
 
 // Assign viewports to tasks
 $vpTable:					$vpC;		// Table view switch
 $vpMenu:					$vpC;		// Menu for small screen switch
-$vpDeviceSafe:		800px;	// Safe width for tablet type things as they can be weird
+$vpDeviceSafe:		800px;	// Safe width for tablet type things as they can be odd
 
 // ------------------------------------------------------------------
 

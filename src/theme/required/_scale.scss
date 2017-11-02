@@ -12,7 +12,6 @@ $remRoot: 10;
 $scaleRoot: 				10;
 $lineheightRoot: 		1.5;
 
-$typeXXL: 					$scaleRoot*3;
 $typeXL: 						$scaleRoot*2.8;
 $typeL: 						$scaleRoot*2.2;
 $typeM:							$scaleRoot*1.8;
@@ -21,5 +20,6 @@ $typeS: 						$scaleRoot*1.4;
 $typeXS: 						$scaleRoot*1.1;
 
 // Fringe sizes
+$typeMasthead:			$scaleRoot*7;
 $typeHeadline:			$scaleRoot*5.6;
 $typeByline:				$scaleRoot*4.2;

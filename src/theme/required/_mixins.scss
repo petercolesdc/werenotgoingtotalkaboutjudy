@@ -1,6 +1,6 @@
-// ----
+
 // Consistent spacing
-// ----
+// ------------------------------------------------------------------
 
 @mixin edgeBufferLeft {
 	left: $bufferSpaceS;
@@ -16,9 +16,9 @@
 	}
 }
 
-// ----
+
 // Standard rows
-// ----
+// ------------------------------------------------------------------
 
 @mixin rowDefault {
 	margin-left: auto;
@@ -34,9 +34,8 @@
 	}
 }
 
-// ----
 // Helpers
-// ----
+// ------------------------------------------------------------------
 
 // Oldschool clearfixing
 @mixin pie-clearfix {
@@ -47,9 +46,9 @@
 	}
 }
 
-// ----
 // Media queries with fallbacks if needed
-// ----
+// ------------------------------------------------------------------
+
 
 // Widths only
 @mixin respond-to($media-min) {
