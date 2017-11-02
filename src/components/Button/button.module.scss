@@ -4,12 +4,22 @@
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  color: #fff;
 }
 
 .primary {
+  background-color: blue;
+}
+
+.danger {
   background-color: red;
 }
 
+.success{
+  background-color: green;
+}
+
 .disabled {
-  font-style: italic;
+  opacity: 0.3;
+  cursor: not-allowed;
 }

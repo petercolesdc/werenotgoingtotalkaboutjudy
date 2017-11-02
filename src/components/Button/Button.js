@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './button.module.scss';
 
-const COLORS = [
+const ROLES = [
   'primary', 'danger', 'success'
 ];
 
 const propTypes = {
-  color: PropTypes.oneOf(COLORS),
+  color: PropTypes.oneOf(ROLES),
   disabled: PropTypes.bool,
 };
 

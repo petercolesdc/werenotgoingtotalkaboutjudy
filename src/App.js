@@ -8,9 +8,8 @@ class App extends Component {
     return (
       <LayoutDefault>
         <Button
-          color={'primary'}
+          color={'danger'}
           className={'button'}
-          disabled
         >
         Button</Button>
       </LayoutDefault>
