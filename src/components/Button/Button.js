@@ -4,24 +4,27 @@ import classNames from 'classnames';
 import styles from './button.module.scss';
 
 const ROLES = [
-  'primary', 'danger', 'success'
+  'primary', 'secondary', 'transactional'
 ];
 
 const propTypes = {
   color: PropTypes.oneOf(ROLES),
   disabled: PropTypes.bool,
+  type: PropTypes.string,
+  href: PropTypes.string,
 };
 
 const defaultProps = {
   color: 'primary',
   disabled: false,
+  type: 'button',
 };
 
 export default class Button extends Component {
-  _getClassNames() {
+  getClassNames() {
     const {
       color,
-      disabled
+      disabled,
     } = this.props;
 
     let propClassNames = {};
@@ -37,12 +40,29 @@ export default class Button extends Component {
 
   render() {
     const {
+      href,
+      type,
+      children,
       className, // Passed as a prop when button is created
     } = this.props;
 
-    return (
-      <button className={classNames(this._getClassNames(), styles[className])}>{this.props.children}</button>
-    )
+    const element = href ? 'a' : 'button';
+
+    const props = {
+      href,
+      className: classNames(this.getClassNames(), styles[className]),
+      type: !href ? type : null,
+    }
+
+    //return (
+      //<button className={classNames(this.getClassNames(), styles[className])}>{children}</button>
+    //)
+
+    return React.createElement(
+      element,
+      props,
+      children,
+    );
   }
 };
 

@@ -5,17 +5,20 @@
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
+  text-decoration: none;
+  line-height: 1;
+  display: inline-block;
 }
 
 .primary {
   background-color: blue;
 }
 
-.danger {
+.secondary {
   background-color: red;
 }
 
-.success{
+.transactional {
   background-color: green;
 }
 
