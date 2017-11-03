@@ -4,18 +4,44 @@
 // ------------------------------------------------------------------
 
 .button {
-  position: relative;
-  padding: 1rem;
-  text-align: center;
-  text-transform: uppercase;
   cursor: pointer;
+  position: relative;
+  padding: 0 2rem;
+  vertical-align: middle;
+  text-align: center;
   color: #fff;
   text-decoration: none;
-  line-height: 1;
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 3px;
+  transition-property: color;
+  transition-duration: 0.5s;
+  overflow: hidden;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  @include animationHacks;
+  &:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(255,255,255,0.3);
+    transform: scaleX(0) rotate(60deg);
+    transform-origin: 0 0;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
   @include link-active-styles {
     text-decoration: none;
+    &:before {
+      transform: scaleX(5) rotate(60deg);
+      transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
+    }
+  }
+  &:focus {
+    outline: none;
   }
 }
 
@@ -24,14 +50,17 @@
 
 .default {
   font-size: rem($typeMe);
+  line-height: $btnDefault;
 }
 
 .small {
   font-size: rem($typeS);
+  line-height: $btnSmall;
 }
 
 .large {
   font-size: rem($typeL);
+  line-height: $btnLarge;
 }
 
 
@@ -39,17 +68,11 @@
 // ------------------------------------------------------------------
 
 .primary {
-  background-color: $dmAction;
-  @include link-active-styles {
-    background-color: $dmActionRespond;
-  }
+  background-color: $dmActionRespond;
 }
 
 .secondary {
   background-color: $dmPrimeAccent;
-  @include link-active-styles {
-    background-color: $dmPrime;
-  }
 }
 
 .transactional {
@@ -61,10 +84,33 @@
 // ------------------------------------------------------------------
 
 .disabled {
-  opacity: 0.2;
   cursor: not-allowed;
   background-color: grey;
+  &:before {
+    display: none;
+  }
   @include link-active-styles {
     background-color: grey;
+    animation-name: buzz;
+    animation-duration: 0.75s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    transform-origin: center;
   }
+}
+
+// Animation
+// ------------------------------------------------------------------
+
+@keyframes buzz {
+  10% { transform: translateX(3px) rotate(2deg); }
+  20% { transform: translateX(-3px) rotate(-2deg); }
+  30% { transform: translateX(3px) rotate(2deg); }
+  40% { transform: translateX(-3px) rotate(-2deg); }
+  50% { transform: translateX(2px) rotate(1deg); }
+  60% { transform: translateX(-2px) rotate(-1deg); }
+  70% { transform: translateX(2px) rotate(1deg); }
+  80% { transform: translateX(-2px) rotate(-1deg); }
+  90% { transform: translateX(1px) rotate(0deg); }
+  100% { transform: translateX(-1px) rotate(0deg); }
 }

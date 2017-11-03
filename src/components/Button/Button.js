@@ -14,8 +14,8 @@ const propTypes = {
 const defaultProps = {
   color: 'primary',
   size: 'default',
-  disabled: false,
   type: 'button',
+  disabled: false,
 };
 
 export default class Button extends Component {

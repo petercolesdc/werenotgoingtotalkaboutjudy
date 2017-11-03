@@ -10,11 +10,11 @@
 // ------------------------------------------------------------------
 
 .kernTight {
-	letter-spacing: -0.1rem;
+	letter-spacing: -0.2rem;
 }
 
 .kernLoose {
-	letter-spacing: 2rem;
+	letter-spacing: 0.2rem;
 }
 
 // Typescale
@@ -22,10 +22,11 @@
 
 .typeMasthead {
 	@extend %typebaseRoot;
+	@extend .kernTight;
 	font-size: rem($typeMasthead);
 	line-height: 1.4;
 	&_trailer {
-		margin-bottom: rem($typeMasthead/2);
+		margin-bottom: rem($typeMasthead/4);
 	}
 }
 
