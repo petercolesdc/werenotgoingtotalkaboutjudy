@@ -1,9 +1,9 @@
 @import '../../theme/required/variables.scss';
 
-// Default
+// Button defaults
 // ------------------------------------------------------------------
 
-.button {
+%button {
   cursor: pointer;
   position: relative;
   padding: 0 2rem;
@@ -12,23 +12,25 @@
   color: #fff;
   text-decoration: none;
   display: inline-block;
-  border-radius: 3px;
+  border-radius: 0.2rem;
   transition-property: color;
   transition-duration: 0.5s;
   overflow: hidden;
   text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  border: 1px solid rgba(0,0,0,0.1);
   @include animationHacks;
   &:before {
 		content: "";
 		position: absolute;
 		z-index: -1;
 		top: 0;
-		left: 0;
+		left: -40px;
 		right: 0;
 		bottom: 0;
-		background-color: rgba(255,255,255,0.3);
-    transform: scaleX(0) rotate(60deg);
-    transform-origin: 0 0;
+    //width: 150%;
+		background-color: rgba(0,0,0,0.2);
+    transform: rotate(-90deg);
+    transform-origin: -60px 0;
     transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
@@ -36,7 +38,7 @@
   @include link-active-styles {
     text-decoration: none;
     &:before {
-      transform: scaleX(5) rotate(60deg);
+      transform: rotate(0deg);
       transition-timing-function: cubic-bezier(.52,1.64,.37,.66);
     }
   }
@@ -51,16 +53,19 @@
 .default {
   font-size: rem($typeMe);
   line-height: $btnDefault;
+  @extend %button;
 }
 
 .small {
   font-size: rem($typeS);
   line-height: $btnSmall;
+  @extend %button;
 }
 
 .large {
   font-size: rem($typeL);
   line-height: $btnLarge;
+  @extend %button;
 }
 
 

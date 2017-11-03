@@ -28,11 +28,11 @@ export default class Button extends Component {
 
     let propClassNames = {};
 
-    // [element] is a key which resolves to a css class
+    // [element] is a key which resolves to a class
     propClassNames[styles[color]] = true;
     propClassNames[styles[size]] = true;
 
-    // element is a single css class
+    // element is a single optional class
     propClassNames[styles.disabled] = disabled;
 
     return propClassNames;
