@@ -56,6 +56,12 @@
 	}
 }
 
+@mixin link-active-styles {
+	&:hover, &:focus, &:active {
+		@content; 
+	}
+}
+
 // Media queries with fallbacks if needed
 // ------------------------------------------------------------------
 

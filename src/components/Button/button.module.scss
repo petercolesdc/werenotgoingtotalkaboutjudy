@@ -1,3 +1,5 @@
+@import '../../theme/required/variables.scss';
+
 .button {
   position: relative;
   padding: 1rem;
@@ -8,21 +10,56 @@
   text-decoration: none;
   line-height: 1;
   display: inline-block;
+  border-radius: 2px;
+  @include link-active-styles {
+    text-decoration: none;
+  }
 }
 
+// Sizes
+// ------------------------------------------------------------------
+
+.default {
+  font-size: rem($typeMe);
+}
+
+.small {
+  font-size: rem($typeS);
+}
+
+.large {
+  font-size: rem($typeL);
+}
+
+// Colours
+// ------------------------------------------------------------------
+
 .primary {
-  background-color: blue;
+  background-color: $dmAction;
+  @include link-active-styles {
+    background-color: $dmActionRespond;
+  }
 }
 
 .secondary {
-  background-color: red;
+  background-color: $dmPrimeAccent;
+  @include link-active-styles {
+    background-color: $dmPrime;
+  }
 }
 
 .transactional {
-  background-color: green;
+  background-color: $dmSuccess;
 }
 
+// State
+// ------------------------------------------------------------------
+
 .disabled {
-  opacity: 0.3;
+  opacity: 0.2;
   cursor: not-allowed;
+  background-color: grey;
+  @include link-active-styles {
+    background-color: grey;
+  }
 }
