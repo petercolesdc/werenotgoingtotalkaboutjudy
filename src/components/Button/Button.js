@@ -3,21 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './button.module.scss';
 
-const ROLES = [
-  'primary',
-  'secondary',
-  'transactional'
-];
-
-const SIZES = [
-  'small',
-  'default',
-  'large'
-];
-
 const propTypes = {
-  color: PropTypes.oneOf(ROLES),
-  size: PropTypes.oneOf(SIZES),
+  color: PropTypes.string,
+  size: PropTypes.string,
   disabled: PropTypes.bool,
   type: PropTypes.string,
   href: PropTypes.string,
@@ -67,7 +55,7 @@ export default class Button extends Component {
       className: classNames(this.getClassNames(), styles[className]),
       type: !href ? type : null,
     }
-    
+
     return React.createElement(
       element,
       props,

@@ -1,5 +1,8 @@
 @import '../../theme/required/variables.scss';
 
+// Default
+// ------------------------------------------------------------------
+
 .button {
   position: relative;
   padding: 1rem;
@@ -31,7 +34,8 @@
   font-size: rem($typeL);
 }
 
-// Colours
+
+// Styles
 // ------------------------------------------------------------------
 
 .primary {
@@ -51,6 +55,7 @@
 .transactional {
   background-color: $dmSuccess;
 }
+
 
 // State
 // ------------------------------------------------------------------
