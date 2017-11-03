@@ -1,4 +1,15 @@
 
+
+// Sharpen type (use with care)
+// ------------------------------------------------------------------
+
+@mixin sharp-text {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+
 // Consistent spacing
 // ------------------------------------------------------------------
 
@@ -15,7 +26,6 @@
 		right: $bufferSpaceM;
 	}
 }
-
 
 // Standard rows
 // ------------------------------------------------------------------
