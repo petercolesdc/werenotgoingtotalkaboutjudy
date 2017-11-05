@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <LayoutDefault>
         <h1 className="typeMasthead typeMasthead_trailer">Buttons</h1>
-        <Button color="secondary" href="foo" title="anchor">Anchor</Button>
-        <Button color="primary" size="large">Button</Button>
-        <Button size="small" disabled>Small button</Button>
+        <Button className="elementButton" color="secondary" href="foo" title="anchor">Anchor</Button>
+        <Button className="elementButton" color="primary" size="large">Button</Button>
+        <Button className="elementButton" size="small" disabled>Small button</Button>
       </LayoutDefault>
     )
   }

@@ -52,7 +52,8 @@ export default class Button extends Component {
     const props = {
       href,
       title,
-      className: classNames(this.getClassNames(), styles[className]),
+      //className: classNames(this.getClassNames(), styles[className]),
+      className: classNames(this.getClassNames(), className),
       type: !href ? type : null,
     }
 
