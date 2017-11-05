@@ -47,6 +47,25 @@
   }
 }
 
+// Aria label style
+// Allows us to have an aria unique label but shortend visual label
+// ------------------------------------------------------------------
+
+.a11y {
+  position: relative;
+	overflow: hidden;
+	span {
+		top: -10em;
+		position: absolute;
+		display: inline-block;
+	}
+	&:after {
+		 content: attr(title);
+		 display: block;
+		 color: inherit;
+	}
+}
+
 // Sizes
 // ------------------------------------------------------------------
 

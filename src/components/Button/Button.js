@@ -7,6 +7,7 @@ const propTypes = {
   color: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool,
+  a11y: PropTypes.bool,
   type: PropTypes.string,
   href: PropTypes.string,
 };
@@ -16,6 +17,7 @@ const defaultProps = {
   size: 'default',
   type: 'button',
   disabled: false,
+  a11y: false,
 };
 
 export default class Button extends Component {
@@ -24,6 +26,7 @@ export default class Button extends Component {
       color,
       size,
       disabled,
+      a11y,
     } = this.props;
 
     let propClassNames = {};
@@ -34,6 +37,7 @@ export default class Button extends Component {
 
     // element is a single optional class
     propClassNames[styles.disabled] = disabled;
+    propClassNames[styles.a11y] = a11y;
 
     return propClassNames;
   }
