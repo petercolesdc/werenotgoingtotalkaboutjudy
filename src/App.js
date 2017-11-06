@@ -21,6 +21,13 @@ class App extends Component {
             altTag="Image"
             excerpt={ cardExcerpt[1] }>
           </Card>
+          <Card
+            buttonLabel="Button"
+            title="Another title"
+            imageURL="http://via.placeholder.com/350x250"
+            altTag="Image"
+            excerpt={ cardExcerpt[0] }>
+          </Card>
       </LayoutDefault>
     )
   }
