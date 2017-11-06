@@ -1,18 +1,31 @@
 @import '../../theme/required/variables.scss';
 
 .card {
-  padding: $spaceMe;
   border: 1px solid grey;
   position: relative;
   width: 300px;
-  .elementButton {
-    margin-top: 10px;
-  }
+}
+
+.headingText {
+  text-transform: uppercase;
+}
+
+.image {
+  display: block;
+  max-width: calc(100% + 2px);
+  position: relative;
+  top: -1px;
+  left: -1px;
+  height: auto;
 }
 
 .body {
   position: relative;
+  padding: $spaceMe;
   &Text {
+    margin-top: 10px;
+  }
+  .elementButton {
     margin-top: 20px;
   }
 }

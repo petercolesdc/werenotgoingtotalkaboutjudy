@@ -13,6 +13,7 @@ const defaultProps = {
 };
 
 export default class Card extends Component {
+
   getClassNames() {
     const {
       cardType,
@@ -34,9 +35,13 @@ export default class Card extends Component {
     }
 
     return React.createElement(element,props,(
-        <div className={styles.body}>
-          <p className={classNames(styles.bodyText, "typeMe")}>{this.props.children}</p>
-          <Button className={styles.elementButton} size="small">{this.props.buttonLabel}</Button>
+        <div>
+          <img className={styles.image} src={this.props.imageURL} alt={this.props.altTag}/>
+          <div className={styles.body}>
+            <h2 className={classNames(styles.headingText, "typeL")}>{this.props.title}</h2>
+            <p className={classNames(styles.bodyText, "typeMe")}>{this.props.excerpt}</p>
+            <Button className={styles.elementButton} size="small">{this.props.buttonLabel}</Button>
+          </div>
         </div>
       )
     )
