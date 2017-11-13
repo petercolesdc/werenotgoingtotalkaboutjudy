@@ -25,6 +25,50 @@ function DmButton(props) {
   );
 }
 
+function DmCard(props) {
+  const card = props.cards.map((element) =>
+    <Card
+      key={element.id}
+      className={element.controlClass}
+      title={element.title}
+      imageURL={element.imageURL}
+      altTag={element.altTag}
+      buttonHref={element.buttonHref}
+      buttonLabel={element.buttonLabel}
+      excerpt={element.excerpt}
+    >
+    </Card>
+  );
+  return (
+    <div>
+      { card }
+    </div>
+  );
+}
+
+const cards = [
+  {
+    id: 1,
+    title: "A card",
+    controlClass: "elementCard",
+    imageURL: "http://via.placeholder.com/350x350",
+    altTag: "tag",
+    buttonHref: "foobar",
+    buttonLabel: "More details about this item",
+    excerpt: "This is a short excerpt"
+  },
+  {
+    id: 2,
+    title: "Another card",
+    controlClass: "elementCard",
+    imageURL: "http://via.placeholder.com/350x350",
+    altTag: "tag",
+    buttonHref: "foobar",
+    buttonLabel: "More details about this item",
+    excerpt: "This is another short excerpt"
+  }
+];
+
 const buttons = [
   {
     id: 1,
@@ -103,22 +147,9 @@ class App extends Component {
           />
         </section>
         <section className="section sectionPBoth">
-          <Card
-            buttonLabel="More details about this"
-            buttonHref="foo"
-            title="A title"
-            imageURL="http://via.placeholder.com/350x350"
-            altTag="Image"
-          >
-          </Card>
-          <Card
-            buttonLabel="More details about that"
-            buttonHref="bar"
-            title="Another title"
-            imageURL="http://via.placeholder.com/350x350"
-            altTag="Image"
-          >
-          </Card>
+          <DmCard
+            cards={cards}
+          />
         </section>
       </LayoutDefault>
     )

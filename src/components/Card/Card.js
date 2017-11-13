@@ -31,7 +31,8 @@ export default class Card extends Component {
 
     const element = 'div';
     const props = {
-      className: classNames(this.getClassNames(), styles[className] ),
+      //className: classNames(this.getClassNames(), styles[className] ),
+      className: classNames(this.getClassNames(), className),
     }
 
     return React.createElement(element,props,(
