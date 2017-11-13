@@ -54,7 +54,7 @@ const cards = [
     controlClass: "elementCard",
     imageURL: "http://via.placeholder.com/350x350",
     altTag: "tag",
-    buttonHref: "foobar",
+    buttonHref: "foo",
     buttonLabel: "More details about this item",
     excerpt: "This is a short excerpt"
   },
@@ -64,7 +64,7 @@ const cards = [
     controlClass: "elementCard",
     imageURL: "http://via.placeholder.com/350x350",
     altTag: "tag",
-    buttonHref: "foobar",
+    buttonHref: "bar",
     buttonLabel: "More details about this item",
     excerpt: "This is another short excerpt"
   }
@@ -161,6 +161,13 @@ class App extends Component {
             buttonLabel="More details about this item"
             excerpt="This is another short excerpt"
           />
+        </section>
+        <section className="section sectionPBoth">
+          <h1 className="typeMasthead typeMasthead_trailer">TypeBase</h1>
+          <div className="typebase">
+            <p>The most egregious case of text widows occur in headings, where terminating words are often left dangling on a new line. There are solutions for this: FitText is a JQuery plugin that resizes text dynamically as the browser resizes; Chris Coyier’s technique inserts non-breaking spaces, and there are also SVG solutions. My personal preference is to use vw units to fit heading text on a single line, although this often requires some calculation and experimentation; I hope to create a “FitterText” script in the near future that can apply the correct vw measurement once to text elements, with no recalculation-on-viewport-resize required.</p>
+            <p>Support for widows and orphans is very good: as of this writing, Firefox lacks any awareness of the properties, but all other modern browser versions have excellent support. As such, the properties should be considered progressive enhancement for a site: finishing touches that are great to have and are well-appreciated by users, but not super-critical for page content.</p>
+          </div>
         </section>
       </LayoutDefault>
     )
