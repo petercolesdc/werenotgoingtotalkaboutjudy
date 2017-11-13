@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LayoutDefault from './layouts/Default';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
-import styles from './layouts/test.module.scss'
+import stylesTest from './layouts/test.module.scss'
 
 function DmButton(props) {
   const button = props.buttons.map((element) =>
@@ -153,7 +153,7 @@ class App extends Component {
             cards={cards}
           />
           <Card
-            className={styles.elementCard}
+            className={stylesTest.elementCard}
             title="Inline card with namespaced parent"
             imageURL="http://via.placeholder.com/350x350"
             altTag="tag"
