@@ -1,0 +1,17 @@
+@import '../theme/required/variables.scss';
+
+.buttonStack {
+  position: relative;
+  .elementButton {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.cardStack {
+  position: relative;
+  .elementCard {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}

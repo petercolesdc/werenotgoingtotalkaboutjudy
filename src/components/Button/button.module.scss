@@ -17,7 +17,9 @@
   transition-duration: 0.5s;
   overflow: hidden;
   text-shadow: 0 1px 1px rgba(0,0,0,0.3);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.3);
+  border-top-color: rgba(0,0,0,0.1);
+  border-bottom-width: 3px;
   @include animationHacks;
   span {
     font-size: inherit;
@@ -48,6 +50,7 @@
   }
   &:focus {
     outline: none;
+    border-bottom-width: 1px;
   }
 }
 
@@ -125,6 +128,10 @@
     animation-timing-function: linear;
     animation-iteration-count: 1;
     transform-origin: center;
+  }
+  &:focus {
+    outline: none;
+    border-bottom-width: 3px;
   }
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LayoutDefault from './layouts/Default';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
-import stylesTest from './layouts/test.module.scss'
+import './layouts/guide.scss'
 
 function DmButton(props) {
   const button = props.buttons.map((element) =>
@@ -20,7 +20,7 @@ function DmButton(props) {
     </Button>
   );
   return (
-    <div className="Styles_ButtonStack">
+    <div className="buttonStack">
       { button }
     </div>
   );
@@ -41,7 +41,7 @@ function DmCard(props) {
     </Card>
   );
   return (
-    <div className="Styles_CardStack">
+    <div className="cardStack">
       { card }
     </div>
   );
@@ -52,21 +52,21 @@ const cards = [
     id: 1,
     title: "A card",
     controlClass: "elementCard",
-    imageURL: "http://via.placeholder.com/350x350",
+    imageURL: "https://source.unsplash.com/350x350/?technology",
     altTag: "tag",
     buttonHref: "foo",
     buttonLabel: "More details about this item",
-    excerpt: "This is a short excerpt"
+    excerpt: "Add beautiful text and artwork over Unsplash photos in Over's incredibly powerful editor."
   },
   {
     id: 2,
     title: "Another card",
     controlClass: "elementCard",
-    imageURL: "http://via.placeholder.com/350x350",
+    imageURL: "https://source.unsplash.com/350x350/?people",
     altTag: "tag",
     buttonHref: "bar",
     buttonLabel: "More details about this item",
-    excerpt: "This is another short excerpt"
+    excerpt: "Weebly makes it surprisingly easy to build a high-quality website, blog or online store."
   }
 ];
 
@@ -151,15 +151,6 @@ class App extends Component {
           <h1 className="typeMasthead typeMasthead_trailer">Cards</h1>
           <DmCard
             cards={cards}
-          />
-          <Card
-            className={stylesTest.elementCard}
-            title="Inline card with namespaced parent"
-            imageURL="http://via.placeholder.com/350x350"
-            altTag="tag"
-            buttonHref="foobar"
-            buttonLabel="More details about this item"
-            excerpt="This is another short excerpt"
           />
         </section>
         <section className="section sectionPBoth">
