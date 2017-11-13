@@ -7,6 +7,10 @@
   display: inline-block;
 }
 
+.container {
+  position: relative;
+}
+
 .headingText {
   text-transform: uppercase;
 }
@@ -26,7 +30,8 @@
   &Text {
     margin-top: 10px;
   }
-  .elementButton {
-    margin-top: 20px;
-  }
+}
+
+.button {
+  margin-top: 20px;
 }

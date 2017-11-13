@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import LayoutDefault from './layouts/Default';
 import Button from './components/Button/Button';
 import Card from './components/Card/Card';
+import styles from './layouts/test.module.scss'
 
 function DmButton(props) {
   const button = props.buttons.map((element) =>
@@ -19,7 +20,7 @@ function DmButton(props) {
     </Button>
   );
   return (
-    <div>
+    <div className="Styles_ButtonStack">
       { button }
     </div>
   );
@@ -40,7 +41,7 @@ function DmCard(props) {
     </Card>
   );
   return (
-    <div>
+    <div className="Styles_CardStack">
       { card }
     </div>
   );
@@ -147,8 +148,18 @@ class App extends Component {
           />
         </section>
         <section className="section sectionPBoth">
+          <h1 className="typeMasthead typeMasthead_trailer">Cards</h1>
           <DmCard
             cards={cards}
+          />
+          <Card
+            className={styles.elementCard}
+            title="Inline card with namespaced parent"
+            imageURL="http://via.placeholder.com/350x350"
+            altTag="tag"
+            buttonHref="foobar"
+            buttonLabel="More details about this item"
+            excerpt="This is another short excerpt"
           />
         </section>
       </LayoutDefault>
