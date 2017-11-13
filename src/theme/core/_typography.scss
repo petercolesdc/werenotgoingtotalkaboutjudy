@@ -24,7 +24,7 @@
 	@extend %typebaseRoot;
 	@extend .kernTight;
 	font-size: rem($typeMasthead);
-	line-height: 1.4;
+	line-height: 1;
 	&_trailer {
 		margin-bottom: rem($typeMasthead/4);
 	}

@@ -38,9 +38,9 @@ export default class Card extends Component {
         <div>
           <img className={styles.image} src={this.props.imageURL} alt={this.props.altTag}/>
           <div className={styles.body}>
-            <h2 className={classNames(styles.headingText, "typeL")}>{this.props.title}</h2>
-            <p className={classNames(styles.bodyText, "typeMe")}>{this.props.excerpt}</p>
-            <Button className={styles.elementButton} size="small">{this.props.buttonLabel}</Button>
+            <h2 className={classNames(styles.headingText, "typeM")}>{this.props.title}</h2>
+            <p className={classNames(styles.bodyText, "typeS")}>{this.props.excerpt}</p>
+            <Button a11y href={this.props.buttonHref} title="More details" className={styles.elementButton}><span>{this.props.buttonLabel}</span></Button>
           </div>
         </div>
       )

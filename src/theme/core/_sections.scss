@@ -1,0 +1,19 @@
+@import '../required/variables.scss';
+
+.section {
+	padding-top: 6.5rem;
+	padding-bottom: 6.5rem;
+	position: relative;
+	&Unrel {
+		position: static;
+	}
+	&Clip {
+		overflow: hidden;
+	}
+	&CollapseTop {
+		padding-top: 0;
+	}
+	&CollapseBottom {
+		padding-bottom: 0
+	}
+}

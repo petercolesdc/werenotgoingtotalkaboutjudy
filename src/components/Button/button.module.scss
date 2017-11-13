@@ -55,7 +55,7 @@
   position: relative;
 	overflow: hidden;
 	span {
-		top: -10em;
+		left: -1000px;
 		position: absolute;
 		display: inline-block;
 	}
@@ -70,19 +70,19 @@
 // ------------------------------------------------------------------
 
 .default {
-  font-size: rem($typeMe);
+  font-size: rem($typeS);
   line-height: $btnDefault;
   @extend %button;
 }
 
 .small {
-  font-size: rem($typeS);
+  font-size: rem($typeXS);
   line-height: $btnSmall;
   @extend %button;
 }
 
 .large {
-  font-size: rem($typeL);
+  font-size: rem($typeMe);
   line-height: $btnLarge;
   @extend %button;
 }
