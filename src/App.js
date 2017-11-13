@@ -34,7 +34,7 @@ function DmCard(props) {
       title={element.title}
       imageURL={element.imageURL}
       altTag={element.altTag}
-      buttonHref={element.buttonHref}
+      href={element.href}
       buttonLabel={element.buttonLabel}
       excerpt={element.excerpt}
     >
@@ -52,9 +52,9 @@ const cards = [
     id: 1,
     title: "A card",
     controlClass: "elementCard",
-    imageURL: "https://source.unsplash.com/350x350/?technology",
+    imageURL: "https://source.unsplash.com/350x300/?technology",
     altTag: "tag",
-    buttonHref: "foo",
+    href: "foo",
     buttonLabel: "More details about this item",
     excerpt: "Add beautiful text and artwork over Unsplash photos in Over's incredibly powerful editor."
   },
@@ -62,9 +62,9 @@ const cards = [
     id: 2,
     title: "Another card",
     controlClass: "elementCard",
-    imageURL: "https://source.unsplash.com/350x350/?people",
+    imageURL: "https://source.unsplash.com/350x300/?people",
     altTag: "tag",
-    buttonHref: "bar",
+    href: "bar",
     buttonLabel: "More details about this item",
     excerpt: "Weebly makes it surprisingly easy to build a high-quality website, blog or online store."
   }
