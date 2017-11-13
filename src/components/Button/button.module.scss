@@ -19,6 +19,10 @@
   text-shadow: 0 1px 1px rgba(0,0,0,0.3);
   border: 1px solid rgba(0,0,0,0.1);
   @include animationHacks;
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+  }
   &:before {
 		content: "";
 		position: absolute;
@@ -63,6 +67,7 @@
 		 content: attr(title);
 		 display: block;
 		 color: inherit;
+     font-size: inherit;
 	}
 }
 

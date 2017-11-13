@@ -31,7 +31,7 @@ const buttons = [
     label: "Default",
     controlClass: "elementButton",
     a11y: false,
-    disabled: false,
+    disabled: false
   },
   {
     id: 2,
@@ -39,7 +39,15 @@ const buttons = [
     controlClass: "elementButton",
     color: "secondary",
     a11y: false,
-    disabled: false,
+    disabled: false
+  },
+  {
+    id: 2.1,
+    label: "Transaction color",
+    controlClass: "elementButton",
+    color: "transactional",
+    a11y: false,
+    disabled: false
   },
   {
     id: 3,
@@ -71,15 +79,15 @@ const buttons = [
     size: "small",
     color: "secondary",
     a11y: false,
-    disabled: false,
+    disabled: false
   },
   {
-    id: 7,
+    id: 6.1,
     label: "Large button",
     controlClass: "elementButton",
     size: "large",
     a11y: false,
-    disabled: false,
+    disabled: false
   }
 ];
 
