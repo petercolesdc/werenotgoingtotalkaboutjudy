@@ -58,7 +58,7 @@ const cards = [
   },
   {
     id: 2,
-    title: "Stranger Things: The sound of the Upside Down",
+    title: "The sound of the Upside Down",
     meta: "Article",
     controlClass: "elementCard",
     imageURL: "https://source.unsplash.com/350x300/?nature",

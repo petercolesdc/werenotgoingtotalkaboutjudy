@@ -43,7 +43,7 @@ export default class Card extends Component {
     return React.createElement(element,props,(
       <div>
         <div className={styles.header}>
-          <span className={styles.meta}>{this.props.meta}</span>
+          <span className={classNames(styles.meta, "kernLoose")}>{this.props.meta}</span>
         </div>
         <div className={styles.body}>
           <h2 className={classNames(styles.headingText, "typeXL")}>{this.props.title}</h2>
