@@ -1,54 +1,80 @@
 @import '../../theme/required/variables.scss';
 
+$excerptHeight: 90px;
+
 .card {
   position: relative;
-  width: 300px;
+  width: 380px;
+  min-height: 500px;
   display: inline-block;
-  box-shadow: 0 3px 3px rgba(0,0,0,0.12);
   background-color: #fff;
-  border-radius: 0 0 8px 8px;
-  &:hover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+  transition: transform linear 0.25s;
+  @include link-active-styles {
     .body {
       transform: translateY(0);
-      //padding-bottom: $spaceMe;
     }
   }
 }
 
-.container {
+.body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: transform linear 0.125s;
+  transform: translateY(($excerptHeight + $spaceMe));
+  padding: $spaceMe;
+  //box-shadow: inset 0 0 0 -1px rgba(0,0,0,0.12);
+  z-index: 2;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    z-index: 0;
+  }
+}
+
+.header {
   position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: $spaceMe;
+}
+
+.meta {
+  color: #fff;
+  position: relative;
+  font-size: rem($typeXS);
 }
 
 .headingText {
-  text-transform: uppercase;
+  margin-bottom: $spaceMe;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
 
-.image {
+.excerpt {
+  height: $excerptHeight;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+.cta {
   display: block;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.12);
-  max-width: 100%;
-  position: relative;
-  height: auto;
-  border-radius: 8px 8px 0 0;
-  &Link {
-
-  }
-}
-
-.body {
-  position: relative;
-  padding: $spaceMe;
-  background-color: #fff;
-  transition: transform ease-in-out 0.2s;
-  box-shadow: inset 0 0 0 -1px rgba(0,0,0,0.12);
-  border-radius: 0 0 8px 8px;
-  transform: translateY(-$spaceMe);
-  &Text {
-    margin-top: $spaceXs;
-  }
-}
-
-.button {
-  margin: $spaceMe;
-  margin-top: 0;
+  text-align: center;
+  font-weight: 600;
+  padding: $spaceS;
 }

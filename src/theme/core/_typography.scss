@@ -50,6 +50,7 @@
 .typeXL {
 	@extend %typebaseRoot;
 	font-size: rem($typeXL);
+	line-height: 1.4;
 	&_trailer {
 		margin-bottom: rem($typeXL/2);
 	}

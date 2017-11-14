@@ -32,10 +32,9 @@ function DmCard(props) {
       key={element.id}
       className={element.controlClass}
       title={element.title}
+      meta={element.meta}
       imageURL={element.imageURL}
-      altTag={element.altTag}
       href={element.href}
-      buttonLabel={element.buttonLabel}
       excerpt={element.excerpt}
     >
     </Card>
@@ -50,23 +49,21 @@ function DmCard(props) {
 const cards = [
   {
     id: 1,
-    title: "A card",
+    title: "Stranger Things: The sound of the Upside Down",
+    meta: "Article",
     controlClass: "elementCard",
     imageURL: "https://source.unsplash.com/350x300/?technology",
-    altTag: "tag",
     href: "foo",
-    buttonLabel: "More details about this item",
     excerpt: "Add beautiful text and artwork over Unsplash photos in Over's incredibly powerful editor."
   },
   {
     id: 2,
-    title: "Another card",
+    title: "Stranger Things: The sound of the Upside Down",
+    meta: "Article",
     controlClass: "elementCard",
-    imageURL: "https://source.unsplash.com/350x300/?people",
-    altTag: "tag",
-    href: "bar",
-    buttonLabel: "More details about this item",
-    excerpt: "Weebly makes it surprisingly easy to build a high-quality website, blog or online store."
+    imageURL: "https://source.unsplash.com/350x300/?nature",
+    href: "foo",
+    excerpt: "Add beautiful text and artwork over Unsplash photos in Over's incredibly powerful editor."
   }
 ];
 

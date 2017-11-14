@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Button from '../Button/Button';
 import styles from './card.module.scss';
 
 const propTypes = {
@@ -30,22 +29,29 @@ export default class Card extends Component {
     } = this.props;
 
     const element = 'div';
+
+    const bkImage = {
+      backgroundImage: `url(${this.props.imageURL})`
+    }
+
     const props = {
       //className: classNames(this.getClassNames(), styles[className] ),
       className: classNames(this.getClassNames(), className),
+      style: bkImage,
     }
 
     return React.createElement(element,props,(
-        <div className={styles.container}>
-          <a href={this.props.href} className={styles.imageLink}>
-            <img className={styles.image} src={this.props.imageURL} alt={this.props.altTag}/>
-          </a>
-          <div className={styles.body}>
-            <h2 className={classNames(styles.headingText, "typeM")}>{this.props.title}</h2>
-            <p className={classNames(styles.bodyText, "typeS")}>{this.props.excerpt}</p>
-          </div>
-          <Button a11y href={this.props.href} title="More details" size="small" className={styles.button}><span>{this.props.buttonLabel}</span></Button>
+      <div>
+        <div className={styles.header}>
+          <span className={styles.meta}>{this.props.meta}</span>
         </div>
+        <div className={styles.body}>
+          <h2 className={classNames(styles.headingText, "typeXL")}>{this.props.title}</h2>
+          <p className={classNames(styles.excerpt, "typeS")}>{this.props.excerpt}
+            <a href={this.props.href} className={styles.cta}>Read on</a>
+          </p>
+        </div>
+      </div>
       )
     )
   }
